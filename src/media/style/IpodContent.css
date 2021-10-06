@@ -1,0 +1,27 @@
+.container{
+    height:30rem;
+    width:20rem;
+    background-image:radial-gradient(#c8d5e2, #727475);
+    /*margin:'4rem auto';*/
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 45px;
+}
+.round-container{
+    width:75%;
+    height:42%;
+    border-radius: 50%;
+    margin-top: 1.2rem auto;
+    background-color: #d3d1ce;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.buttons{
+    width:85%;
+    height:30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
