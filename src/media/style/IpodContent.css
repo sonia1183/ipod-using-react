@@ -1,8 +1,8 @@
 .container{
     height:30rem;
     width:20rem;
-    background-image:radial-gradient(#c8d5e2, #727475);
-    /*margin:'4rem auto';*/
+    background-image:radial-gradient(ellipse at bottom,#b5b6b8, #5e6061);
+    box-shadow: 1px 1px 5px 5px#d6b685;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,13 +10,14 @@
 }
 .round-container{
     width:75%;
-    height:42%;
+    height:45%;
     border-radius: 50%;
     margin-top: 1.2rem auto;
     background-color: #d3d1ce;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-shadow: 1px 1px 4px 4px rgba(255, 255, 255, 0.452);
 }
 .buttons{
     width:85%;
@@ -24,4 +25,22 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+#icon{
+    font-size: 1.5rem;
+    color:rgba(0, 0, 0, 0.671);
+    margin-top: 27px;
+}
+#middle{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.center{
+    background-image: linear-gradient(45deg,#8c8181,transparent);
+    width: 5.3rem;
+    height:5.3rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 1px rgba(36, 35, 35, 0.452);
 }
