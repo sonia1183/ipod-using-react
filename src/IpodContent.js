@@ -26,7 +26,6 @@ class IpodContent extends Component{
             zt.bind(container, 'rotate', function(event){
                 var Angle = event.detail.distanceFromLast;
                 console.log(Angle);
-
                 if(Angle < 0){
                     console.log(count);
                     count++;
@@ -40,12 +39,113 @@ class IpodContent extends Component{
                             else if(self.state.item === 'Settings'){self.setState({item : "CoverFlow"})}
                         }
                         else if(self.state.page === 'Music'){
-
+                            if(self.state.item === 'Album'){self.setState({item : "Artist"}) }
+                            else if(self.state.item === 'Artist'){self.setState({activeItem : "Album"})}
+                        }
+                }
+            }
+            else{
+                console.log(count);
+                count++;
+                if(count === 15){
+                    console.log("change state");
+                    count = 0;
+                    if(self.state.page === 'Home'){
+                        if(self.state.item === 'CoverFlow'){
+                            self.setState({
+                                item : "Settings"
+                            })
+                        }else if(self.state.item === 'Music'){
+                            self.setState({
+                                item : "CoverFlow"
+                            })
+                        }else if(self.state.item === 'Games'){
+                            self.setState({
+                                item : "Music"
+                            })
+                        }else if(self.state.item === 'Settings'){
+                            self.setState({
+                                item : "Games"
+                            })
+                        }
+                    }else if(self.state.page === 'Music'){
+                        if(self.state.item === 'Album'){
+                            self.setState({
+                                item : "Artist"
+                            })
+                        }else if(self.state.item === 'Artist'){
+                            self.setState({
+                                item : "Album"
+                            })
                         }
                     }
                 }
+            }
+            });
+        }
+        else{
+            console.log("Not allowed to enter");
+        }
+    }
+    next=()=>{
+        if(this.state.item === 'Music'){
+            this.setState({
+                item : 'Album',
+                page : this.state.item
             })
         }
+        else if(this.state.item === 'CoverFlow'){
+            this.setState({
+                item : 'CoverFlow',
+                page : 'Album'
+            })
+        }
+        else{
+            this.setState({
+                item : this.state.item,
+                page : this.state.item
+            })
+        }
+    }
+    toggleHomeToScreen = () => {
+
+        if(this.state.item === 'Album' || this.state.item === 'Artist'){
+            this.setState({
+                item : 'Music',
+                page : 'Home'
+            })
+        }else{
+            this.setState({
+                item : this.state.item,
+                page : 'Home'
+            })
+        }
+        
+    }
+
+    toggle = () =>{
+        if(this.state.page === 'Album'){
+            if(this.state.play === true){
+                this.state.audio.pause();
+                this.setState({
+                    play : false
+                })
+            }else{
+                this.state.audio.play();
+                this.setState({
+                    play : true
+                })
+            }
+            console.log("toggled")
+        }
+    }
+    componentDidMount(){
+        let audio = document.getElementsByClassName("music")[0];
+        console.log(audio)
+        this.setState({
+            audio : audio,
+        })
+        console.log(this.state)
     }
 
     render(){

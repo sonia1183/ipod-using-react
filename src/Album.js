@@ -58,8 +58,8 @@ class Album extends Component{
                         <div className="fill-1" id='fill'></div>
                     </div>
                     <div className="time">
-                    <p className="curr-time">{audio !== null ? Math.floor(audio.currentTime) : '0 / 0'}</p>
-                    <p className="during">{audio != null ? Math.floor(audio.duration) : '0 / 0'}</p>
+                    <p className="curr-time">{audio === null ? '0 / 0' :  Math.floor(audio.currentTime)}</p>
+                    <p className="during">{audio === null ? '0 / 0':Math.floor(audio.duration)}</p>
                     </div>
                 </div>
           </div>

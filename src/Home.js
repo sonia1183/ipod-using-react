@@ -10,17 +10,17 @@ class Home extends Component{
 
                   <div id="title"><img src={logo} alt="" id="logo"></img>IPOD.JS</div>
                   <ListGroup className="list">
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='CoverFlow'?'active':''}>
-                            Cover Flow {this.props.activeItem==='CoverFlow'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='CoverFlow'?'active':''}>
+                            Cover Flow {this.props.item==='CoverFlow'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='Music'?'active':''}>
-                            Music {this.props.activeItem==='Music'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='Music'?'active1':''}>
+                            Music {this.props.item==='Music'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='Games'?'active':''}>
-                            Games {this.props.activeItem==='Games'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='Games'?'active2':''}>
+                            Games {this.props.item==='Games'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='Settings'?'active':''}>
-                            Settings {this.props.activeItem==='Settings'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='Settings'?'active3':''}>
+                            Settings {this.props.item==='Settings'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
                     </ListGroup>
                     

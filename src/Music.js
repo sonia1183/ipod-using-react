@@ -10,11 +10,11 @@ class Music extends Component{
               <div id="menu">
                 <div id="title"><img src={logo} alt="" id="logo"></img>IPOD.JS</div>
                     <ListGroup className="list">
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='MyMusic'?'active':''}>
-                            My Music {this.props.activeItem==='MyMusic'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='Album'?'active2':''}>
+                            Play Music {this.props.item==='Album'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
-                        <ListGroup.Item id="list-item" className={this.props.activeItem==='Artists'?'active':''}>
-                            Artists {this.props.activeItem==='Artists'?<span className="list-item-1">&gt;</span>:''}
+                        <ListGroup.Item id="list-item" className={this.props.item==='Artist'?'active1':''}>
+                            my info {this.props.item==='Artist'?<span className="list-item-1">&gt;</span>:''}
                         </ListGroup.Item>
                     </ListGroup>
               </div>

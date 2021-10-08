@@ -49,7 +49,7 @@
     width:50%;
     height:100%;
     background-image: url(../images/game.gif);
-    background-size: 90% 50%;
+    background-size: 90% 90%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -62,4 +62,39 @@
     border-radius: 0 24px 24px 0;
     background-position: center;
     background-repeat: no-repeat;
+}
+#artist-screen{
+    width:50%;
+    height:100%;
+    background-image: url(../images/sonia.jfif);
+    background-size: 90% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#info-screen{
+    width:50%;
+    height:100%;
+    box-shadow: 10px 0px 15px -5px #000000bf;
+    z-index: 1;
+    color:black
+}
+.active{
+    background-color: #0000ff7c;
+    font-weight: 550;
+    font-size:18px;
+}
+.active1{
+    background-color: #00800077;
+    font-weight: 550;
+    font-size:18px;
+}
+.active2{
+    background-color:#ff000073;
+    font-weight: 550;
+    font-size:18px;
+}
+.active3{
+    background-color: #ffff007c;
+    font-weight: 550;
+    font-size:18px;
 }
